@@ -32,7 +32,7 @@ def gitSubmoduleHashSnapshotVersion(submod: String): String = {
      scala.sys.process.Process(Seq("/bin/sh", "-c", shellcommand )).!!.mkString.replaceAll("\\s", "")+"-SNAPSHOT"
 }
 
-name := "TheSDK-Generators"
+name := "clkmux"
 version := scala.sys.process.Process("git rev-parse --short HEAD").!!.mkString.replaceAll("\\s", "")+"-SNAPSHOT"
 
 scalaVersion := "2.11.11"
