@@ -54,7 +54,7 @@ val defaultVersions = Map(
 libraryDependencies ++= (Seq("chisel3","dsptools", "chisel-iotesters").map {
   dep: String => "edu.berkeley.cs" %% dep % sys.props.getOrElse(dep + "Version", defaultVersions(dep)) })
 
-libraryDependencies += "com.gilt" %% "handlebars-scala" % "2.1.1"
+//libraryDependencies += "com.gilt" %% "handlebars-scala" % "2.1.1"
 
 libraryDependencies  ++= Seq(
   // Last stable release
