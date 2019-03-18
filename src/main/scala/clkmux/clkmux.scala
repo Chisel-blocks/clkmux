@@ -12,7 +12,8 @@ class clkmux() extends Module {
             val sel = Input(Bool())
         } 
     )
-    io.co := Mux(io.sel, io.c0.asUInt.toBool, io.c1.asUInt.toBool).asClock
+    // sel, whentrue, whenfalse
+    io.co := Mux(io.sel, io.c1.asUInt.toBool, io.c0.asUInt.toBool).asClock
 }
 
 //This gives you verilog
