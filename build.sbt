@@ -41,7 +41,7 @@ def javacOptionsVersion(scalaVersion: String): Seq[String] = {
 def gitSubmoduleHashSnapshotVersion(submod: String): String = {
     val shellcommand =  "git submodule status | grep %s | awk '{print substr($1,0,7)}'".format(submod)
     scala.sys.process.Process(Seq("/bin/sh", "-c", shellcommand )).!!.mkString.replaceAll("\\s", "")
-
+}
 
 // [TODO] what are these needed for? remove if obsolete
 crossScalaVersions := Seq("2.11.11", "2.12.3")
@@ -86,9 +86,6 @@ libraryDependencies  ++= Seq(
   "org.scalanlp" %% "breeze-viz" % "0.13.2"
 )
 
-// Some common deps in BWRC projects, select if needed
-// TODO-how to figure out what version is the current and the best?
-libraryDependencies += "edu.berkeley.cs" %% "dsptools" % "1.1-SNAPSHOT"
 
 //libraryDependencies += "berkeley" %% "rocketchip" % "1.2"
 //libraryDependencies += "edu.berkeley.eecs" %% "ofdm" % "0.1"
