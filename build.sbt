@@ -7,7 +7,7 @@ organization := "Chisel-blocks"
 name := "clkmux"
 
 version := scala.sys.process.Process("git rev-parse --short HEAD").!!.mkString.replaceAll("\\s", "")
-scalaVersion := "2.11.11"
+scalaVersion := "2.12.3"
 
 // [TODO] what are these needed for? remove if obsolete
 def scalacOptionsVersion(scalaVersion: String): Seq[String] = {
